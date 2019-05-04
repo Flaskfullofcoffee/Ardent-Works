@@ -1,33 +1,278 @@
-.App {
-  text-align: center;
+/* Global styles */
+
+body, * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.hide {
+  display: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* temporary styles */
+#hero { background: tomato; }
+#intro { background: indigo; }
+#portfolio { background: tomato; }
+#pricing { background: indigo; }
+#contact { background: tomato; }
+
+.testing123 {
+  font-size: 5vw;
+  color: yellow;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  height: 100vh;
+}
+section:nth-child(3){
+  height: 50vh;
+}
+.set1, .set3 {
+  background: grey;
+}
+.set2 {
+  background: firebrick;
+}
+
+/* Content styles */
+
+.content-wrapper {
+  height: auto;
+  width: auto;
+}
+
+/* Navigation styles */
+
+.nav-wrapper {
+  /* display: none; /* remove until onScroll event is solved */ 
+  position: fixed;
+  top: 5vh;
+  left: 0;
+  width: 100%;
+  background: transparent;
+}
+
+/* Hero styles */
+#hero {
+  /* background-image: url('./images/heroImg.jpg'); */
+  background-position: center;
+  background-size: cover;
+}
+
+/* Intro styles */
+.intro-content {
+  height: 40vh;
+  width: 75vw;
+  background: tomato;
+}
+.intro-content h1 {
+  position: relative;
+  top: 5vh;
+}
+.intro-content p {
+  position: relative;
+  top: 10vh;
+  padding: 0 5.5vw !important;
+  font-size: 3vmin
+}
+
+/* Information section styles */
+
+/* #portfolio-info {
+  height: 100%;
+  align-content: center;
+  ul {
+  height: 100%;
+  }
+    .tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+        p {
+          font-size: 2vw;
+          padding: 4vh 1vw !important;
+        }
+    }
+    li {
+
+      font-size: 4vw;
+    }
+    // use this to activate the portfolio type the user wants to view
+    .active {
+      flex-grow: 5 !important;
+      display: initial;
+    }
+} */
+#portfolio-info {
+  height: 100%;
+  align-content: center;
+}
+#portfolio-info ul {
+  height: 100%;
+}
+#portfolio-info li {
+  font-size: 4vw;
+}
+.tab {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid black;
+}
+.tab * {
+  pointer-events: none;
+}
+/* .tab p {
+  font-size: 3.8vmin;
+  padding: 4vh 1vw !important;
+} */
+/* use this to activate the portfolio type the user wants to view */
+.active {
+  flex-grow: 3 !important;
+  display: initial;
+  padding: 2vw !important;
+  background: #60D4C8;
+  transition: all 2.5s;
+}
+.active p {
+  display: flex;
+  font-size: 3.8vmin;
+  padding: 4vh 1vw !important;
+  transition: all 1.5s ease-in;
+}
+.in-active {
+  flex-grow: 1 !important;
+  transition: all 1.25s ease-out;
+}
+.in-active p {
+  display: none;
+  transition: all 1.25s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+/* Gallery section styles */
+
+#gallery {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: auto;
+}
+.img-scroll, .img {
+    height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Pricing section styles */
+
+#pricing {
+  height: 100vh;
+}
+.price-container {
+  height: 100%;
+}
+.square {
+  height: 50vh;
+}
+.weddings, .autos {
+  background: firebrick;
+}
+.portraits, .sessions {
+  background: blue;
+}
+
+/* Contact styles */
+
+#contact {
+  height: 100vh;
+  position: relative;
+}
+#contact-img {
+  height: 90vh;
+  position: absolute;
+  background: indigo;
+  bottom: 0;
+}
+#contact-info {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: auto;
+}
+.contact-scroll {
+  height: 100%;
+}
+/* Footer styles */
+
+footer {
+  height: 10vh;
+  background: black;
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+  #gallery, #portfolio-info {
+    display: none !important;
   }
-  to {
-    transform: rotate(360deg);
+  #portfolio-min {
+    visibility: visible;
+    height: 100vh;
+    width: 100%;
+    background: purple;
+  }
+  .img-tab {
+    flex-flow: column;
+  }
+  .gallery-link {
+    align-self: center;
+    position: relative;
+    top: 85vh;
+    font-size: 5vmin;
+    padding: 0 2vw !important;
+  }
+
+
+  #contact-img {
+    display: none;
+  }
+  #contact-info {
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #portfolio-min {
+    /* display: none; */
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  #portfolio-min {
+    /* display: none; */
   }
 }
