@@ -17,10 +17,9 @@ class Navigation extends Component {
 
   handleScroll(event) {
     let element = this.navRef.current;
+    let test = document.getElementById('test');
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-      console.log('its working');
-      // let navbar = document.getElementById('test');
-      // navbar.classList.add('testing123')
+      // test.classList.add('foobar')
     }
   }
 

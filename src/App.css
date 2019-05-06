@@ -22,7 +22,7 @@ li {
 #pricing { background: indigo; }
 #contact { background: tomato; }
 
-.testing123 {
+.foobar {
   font-size: 5vw;
   color: yellow;
 }
@@ -50,7 +50,7 @@ section:nth-child(3){
 /* Navigation styles */
 
 .nav-wrapper {
-  /* display: none; /* remove until onScroll event is solved */ 
+  display: none; /* remove until onScroll event is solved */
   position: fixed;
   top: 5vh;
   left: 0;
@@ -77,7 +77,7 @@ section:nth-child(3){
 }
 .intro-content p {
   position: relative;
-  top: 10vh;
+  top: 8vh;
   padding: 0 5.5vw !important;
   font-size: 3vmin
 }
