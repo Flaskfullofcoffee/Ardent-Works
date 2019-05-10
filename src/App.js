@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navigation from './navigation.js';
 import Hero from './hero.js';
 import Intro from './intro.js';
-import Portfolio from './portfolio.js';
+import Foo from './foo.js';
 import Pricing from './pricing.js';
 import Contact from './contact.js';
 import './App.css';
@@ -18,7 +18,7 @@ class App extends Component {
         <Navigation />
         <Hero />
         <Intro />
-        <Portfolio />
+        <Foo />
         <Pricing />
         <Contact />
       </div>

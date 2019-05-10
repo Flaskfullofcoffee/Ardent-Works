@@ -1,3 +1,4 @@
+
 /* Global styles */
 
 body, * {
@@ -57,7 +58,9 @@ section:nth-child(3){
   width: 100%;
   background: transparent;
 }
-
+.test {
+  color: orange;
+}
 /* Hero styles */
 #hero {
   /* background-image: url('./images/heroImg.jpg'); */
@@ -73,7 +76,7 @@ section:nth-child(3){
 }
 .intro-content h1 {
   position: relative;
-  top: 5vh;
+  top: 2.5vh;
 }
 .intro-content p {
   position: relative;
@@ -134,7 +137,7 @@ section:nth-child(3){
   padding: 4vh 1vw !important;
 } */
 /* use this to activate the portfolio type the user wants to view */
-.active {
+/* .active {
   flex-grow: 3 !important;
   display: initial;
   padding: 2vw !important;
@@ -154,7 +157,7 @@ section:nth-child(3){
 .in-active p {
   display: none;
   transition: all 1.25s ease-out;
-}
+} */
 
 /* Gallery section styles */
 
@@ -275,4 +278,18 @@ footer {
   #portfolio-min {
     /* display: none; */
   }
+}
+
+
+
+
+
+
+/* testing ground css */
+
+.active {
+  color: green;
+}
+.in-active {
+  color: red;
 }
