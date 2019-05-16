@@ -40,109 +40,91 @@ import './App.css'
 
 
 class Foo extends Component {
- constructor() {
-   super()
-   this.state = {
-     activeIdx: -1
-   };
-   this.handleClick = this.handleClick.bind(this)
- }
+  constructor() {
+    super()
+    this.state = {
+      activeIndex: -1
+    };
+    this.handleClick = this.handleClick.bind(this)
+  }
 
- handleClick(idx) {
-   return () => this.setState({ activeIdx: idx });
- }
+  handleClick(index) {
+    return () => this.setState({ activeIndex: index });
+  }
 
  render() {
-     const getStatus = (idx) => this.state.activeIdx === idx ? 'active' : 'inActive';
+     const getStatus = (index) => this.state.activeIndex === index ? 'active' : 'inActive';
+     const content = (index) => this.state.activeIndex === index ? 'reveal' : 'hide';
+
 
      return (
          <div>
-           {
-             Array.from(Array(20)).map((v, i) => {
-               return (
-                 <h1 onClick={this.handleClick(i)} className={getStatus(i)}>{getStatus(i)}</h1>
-               )
-             })
-           }
-           // <h1 onClick={this.handleClick(0)} className={getStatus(0)}>{getStatus(0)}</h1>
-           // <h1 onClick={this.handleClick(1)} className={getStatus(1)}>{getStatus(1)}</h1>
-           // <h1 onClick={this.handleClick(2)} className={getStatus(2)}>{getStatus(2)}</h1>
-           // <h1 onClick={this.handleClick(3)} className={getStatus(3)}>{getStatus(3)}</h1>
+           <h1 onClick={this.handleClick(0)} className={getStatus(0)}>Button is {getStatus(0)}</h1>
+           <h1 onClick={this.handleClick(1)} className={getStatus(1)}>Button is {getStatus(1)}</h1>
+           <p className={content(0)}>Button 1 has been clicked</p>
+           <p className={content(1)}>Button 2 has been clicked</p>
          </div>
      )
  }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//   constructor() {
-//       super()
-//         this.state = {
-//             active: true,
-//             inActive: false
-//         }
-//         this.handleClick = this.handleClick.bind(this)
-//     }
-//
-//     handleClick() {
-//         this.setState(prevState => {
-//             return {
-//                 isLoggedIn: !prevState.isLoggedIn
-//             }
-//         })
-//     }
-//
-//   render() {
-//     return (
-//       <section id="portfolio" className="row">
-//           <div id="portfolio-info" className="col-md-5 d-flex flex-column">
-//             <ul className="text-center d-flex flex-column justify-content-center tabList">
-//               <div id="weddings" className="tab active flex-fill" onClick={this.handleClick}>
-//                 <li className="tab-summary">Weddings</li>
-//                 <p className="tab-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-//               </div>
-//               <div id="portraits" className="tab in-active flex-fill" onClick={this.handleClick}>
-//                 <li className="tab-summary">Portraits</li>
-//                 <p className="tab-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-//               </div>
-//               <div id="sessions" className="tab in-active flex-fill" onClick={this.handleClick}>
-//                 <li className="tab-summary">Mini-Sessions</li>
-//                 <p className="tab-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-//               </div>
-//               <div id="auto" className="tab in-active flex-fill" onClick={this.handleClick}>
-//                 <li className="tab-summary">Automotive</li>
-//                 <p className="tab-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-//               </div>
-//             </ul>
-//           </div>
-//           <div id="portfolio-min" className="row">
-//             <div id="active" className="col-12 d-flex flex-column">
-//                 <button className="btn gallery-link">weddings</button>
-//             </div>
-//             <div className="col-12 d-flex flex-column">
-//                 <button className="btn gallery-link">portraits</button>
-//             </div>
-//             <div className="col-12 d-flex flex-column">
-//                 <button className="btn gallery-link">mini-sessions</button>
-//             </div>
-//             <div className="col-12 d-flex flex-column">
-//                 <button className="btn gallery-link">mini-sessions</button>
-//             </div>
-//           </div>
-//           <Bar />
-//         </section>
-//     )
-//   }
+// constructor() {
+//   super()
+//   this.state = {
+//     activeIdx: -1
+//   };
+//   this.handleClick = this.handleClick.bind(this)
 // }
+//
+// handleClick(idx) {
+//   return () => this.setState({ activeIdx: idx });
+// }
+
+
+
+
+// {
+//   Array.from(Array(20)).map((v, i) => {
+//     return (
+//       <h1 onClick={this.handleClick(i)} className={getStatus(i)}>{getStatus(i)}</h1>
+//     )
+//   })
+// }
+
+
+
+
+
+
+// class Foo extends Component {
+//  constructor() {
+//    super()
+//    this.state = {
+//      activeIdx: -1
+//    };
+//  }
+//
+//  handleClick(idx) {
+//    this.setState({ activeIdx: idx });
+//  }
+//
+//  render() {
+//      function getStatus(idx) {
+//          return this.state.activeIdx === idx ? 'active' : 'inActive';
+//      }
+//      return (
+//          <div>
+//            <h1 onClick={this.handleClick.bind(0, this)} className={getStatus(0)}>{getStatus(0)}</h1>
+//            <h1 onClick={this.handleClick.bind(1, this)} className={getStatus(1)}>{getStatus(1)}</h1>
+//            <h1 onClick={this.handleClick.bind(2, this)} className={getStatus(2)}>{getStatus(2)}</h1>
+//            <h1 onClick={this.handleClick.bind(3, this)} className={getStatus(3)}>{getStatus(3)}</h1>
+//          </div>
+//      )
+//  }
+// }
+
+
+
+
 export default Foo;

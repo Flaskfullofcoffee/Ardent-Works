@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Navigation from './navigation.js';
 import Hero from './hero.js';
 import Intro from './intro.js';
-import Foo from './foo.js';
+import Portfolio from './portfolio.js';
 import Pricing from './pricing.js';
 import Contact from './contact.js';
+import Foo from './foo.js'
 import './App.css';
 
 

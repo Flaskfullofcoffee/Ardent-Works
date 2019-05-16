@@ -87,13 +87,13 @@ section:nth-child(3){
 
 /* Information section styles */
 
-/* #portfolio-info {
+#portfolio-info {
   height: 100%;
   align-content: center;
   ul {
   height: 100%;
   }
-    .tab {
+    /* .tab {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -107,12 +107,12 @@ section:nth-child(3){
 
       font-size: 4vw;
     }
-    // use this to activate the portfolio type the user wants to view
-    .active {
+    /* // use this to activate the portfolio type the user wants to view */
+    /*.active {
       flex-grow: 5 !important;
       display: initial;
-    }
-} */
+    } */
+}
 #portfolio-info {
   height: 100%;
   align-content: center;
@@ -132,32 +132,28 @@ section:nth-child(3){
 .tab * {
   pointer-events: none;
 }
-/* .tab p {
-  font-size: 3.8vmin;
-  padding: 4vh 1vw !important;
-} */
+.tab p {
+  display: none;
+}
 /* use this to activate the portfolio type the user wants to view */
-/* .active {
+  /* .active {
   flex-grow: 3 !important;
   display: initial;
   padding: 2vw !important;
   background: #60D4C8;
   transition: all 2.5s;
-}
-.active p {
+} */
+/* .active p {
   display: flex;
-  font-size: 3.8vmin;
+  font-size: 3.5vmin;
   padding: 4vh 1vw !important;
   transition: all 1.5s ease-in;
 }
-.in-active {
+.inActive {
   flex-grow: 1 !important;
   transition: all 1.25s ease-out;
-}
-.in-active p {
-  display: none;
-  transition: all 1.25s ease-out;
 } */
+
 
 /* Gallery section styles */
 
@@ -282,14 +278,16 @@ footer {
 
 
 
-
-
-
-/* testing ground css */
-
 .active {
   color: green;
 }
-.in-active {
+.inActive {
   color: red;
+}
+
+.reveal {
+  visibility: visible;
+}
+.hide {
+  visibility: hidden;
 }
