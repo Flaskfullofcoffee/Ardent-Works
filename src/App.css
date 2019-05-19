@@ -12,9 +12,9 @@ a {
 li {
   list-style-type: none;
 }
-.hide {
+/* .hide {
   display: none;
-}
+} */
 
 /* temporary styles */
 #hero { background: tomato; }
@@ -93,7 +93,7 @@ section:nth-child(3){
   ul {
   height: 100%;
   }
-    /* .tab {
+    .tab {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -108,10 +108,10 @@ section:nth-child(3){
       font-size: 4vw;
     }
     /* // use this to activate the portfolio type the user wants to view */
-    /*.active {
+    .active {
       flex-grow: 5 !important;
       display: initial;
-    } */
+    }
 }
 #portfolio-info {
   height: 100%;
@@ -136,14 +136,14 @@ section:nth-child(3){
   display: none;
 }
 /* use this to activate the portfolio type the user wants to view */
-  /* .active {
+ .active {
   flex-grow: 3 !important;
   display: initial;
   padding: 2vw !important;
   background: #60D4C8;
   transition: all 2.5s;
-} */
-/* .active p {
+}
+ .active p {
   display: flex;
   font-size: 3.5vmin;
   padding: 4vh 1vw !important;
@@ -152,7 +152,7 @@ section:nth-child(3){
 .inActive {
   flex-grow: 1 !important;
   transition: all 1.25s ease-out;
-} */
+}
 
 
 /* Gallery section styles */
@@ -278,16 +278,17 @@ footer {
 
 
 
-.active {
+/* .active {
   color: green;
 }
 .inActive {
   color: red;
-}
+} */
 
 .reveal {
   visibility: visible;
 }
 .hide {
-  visibility: hidden;
+  display: none;
+  overflow: hidden;
 }

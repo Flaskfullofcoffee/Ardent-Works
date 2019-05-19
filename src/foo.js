@@ -61,8 +61,7 @@ class Foo extends Component {
          <div>
            <h1 onClick={this.handleClick(0)} className={getStatus(0)}>Button is {getStatus(0)}</h1>
            <h1 onClick={this.handleClick(1)} className={getStatus(1)}>Button is {getStatus(1)}</h1>
-           <p className={content(0)}>Button 1 has been clicked</p>
-           <p className={content(1)}>Button 2 has been clicked</p>
+           <Bar activeIndex={this.state.activeIndex} />
          </div>
      )
  }

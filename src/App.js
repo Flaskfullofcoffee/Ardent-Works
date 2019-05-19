@@ -19,7 +19,7 @@ class App extends Component {
         <Navigation />
         <Hero />
         <Intro />
-        <Foo />
+        <Portfolio />
         <Pricing />
         <Contact />
       </div>

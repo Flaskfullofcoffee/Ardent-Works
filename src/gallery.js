@@ -7,9 +7,10 @@ class Gallery extends Component {
 
 
   render() {
+    const content = (index) => this.props.activeIdx === index ? 'reveal' : 'hide';
     return (
       <div id="gallery" className="col-md-7">
-        <div id="collapseWedding" className="img-scroll wedding-gallery collapse">
+        <div className={`img-scroll wedding-gallery ${content(0)}`}>
           <div className="img set1">
 
           </div>
@@ -20,7 +21,7 @@ class Gallery extends Component {
 
           </div>
         </div>
-        <div id="collapsePortraits" className="img-scroll portraits-gallery collapse">
+        <div className={`img-scroll portraits-gallery ${content(1)}`}>
           <div className="img set2">
 
           </div>
@@ -31,7 +32,7 @@ class Gallery extends Component {
 
           </div>
         </div>
-        <div className="img-scroll sessions-gallery hide">
+        <div className={`img-scroll sessions-gallery ${content(2)}`}>
           <div className="img set1">
 
           </div>
@@ -42,7 +43,7 @@ class Gallery extends Component {
 
           </div>
         </div>
-        <div className="img-scroll auto-gallery hide">
+        <div className={`img-scroll auto-gallery ${content(3)}`}>
           <div className="img set2">
 
           </div>

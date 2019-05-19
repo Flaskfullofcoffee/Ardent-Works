@@ -23,11 +23,11 @@ class Portfolio extends Component {
       <section id="portfolio" className="row">
         <div id="portfolio-info" className="col-md-5 d-flex flex-column">
           <ul className="text-center d-flex flex-column justify-content-center">
-            <div id="weddings" className={`tab ${getStatus(0)} flex-fill`} data-toggle="collapse" data-target="#collapseWedding" aria-expanded="true" aria-controls="collapseWedding" onClick={this.handleClick(0)}>
+            <div id="weddings" className={`tab ${getStatus(0)} flex-fill`} onClick={this.handleClick(0)}>
               <li className="tab-summary">Weddings</li>
               <p className="tab-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div id="portraits" className={`tab ${getStatus(1)} flex-fill`} data-toggle="collapse" data-target="#collapsePortraits" aria-expanded="false" aria-controls="collapsePortraits" onClick={this.handleClick(1)}>
+            <div id="portraits" className={`tab ${getStatus(1)} flex-fill`} onClick={this.handleClick(1)}>
               <li className="tab-summary">Portraits</li>
               <p className="tab-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -42,7 +42,7 @@ class Portfolio extends Component {
           </ul>
         </div>
         <PortfolioMinified />
-        <Gallery />
+        <Gallery activeIdx={this.state.activeIdx} />
       </section>
     );
   }
