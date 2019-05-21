@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PortfolioMinified from './portfolioMinified.js'
 import Gallery from './gallery.js'
 import './App.css'
 
@@ -7,7 +6,7 @@ class Portfolio extends Component {
   constructor() {
     super()
     this.state = {
-      activeIdx: -1
+      activeIdx: 0
     };
     this.handleClick = this.handleClick.bind(this)
   }
@@ -41,7 +40,6 @@ class Portfolio extends Component {
             </div>
           </ul>
         </div>
-        <PortfolioMinified />
         <Gallery activeIdx={this.state.activeIdx} />
       </section>
     );
