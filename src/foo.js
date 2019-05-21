@@ -43,7 +43,7 @@ class Foo extends Component {
   constructor() {
     super()
     this.state = {
-      activeIndex: -1
+      activeIndex: 0,
     };
     this.handleClick = this.handleClick.bind(this)
   }
@@ -52,15 +52,17 @@ class Foo extends Component {
     return () => this.setState({ activeIndex: index });
   }
 
+
  render() {
+     // const test = (index) => this.state.activeIndex === 0 ? 'active' : 'inActive';
      const getStatus = (index) => this.state.activeIndex === index ? 'active' : 'inActive';
      const content = (index) => this.state.activeIndex === index ? 'reveal' : 'hide';
 
 
      return (
          <div>
-           <h1 onClick={this.handleClick(0)} className={getStatus(0)}>Button is {getStatus(0)}</h1>
-           <h1 onClick={this.handleClick(1)} className={getStatus(1)}>Button is {getStatus(1)}</h1>
+           <h1 onClick={this.handleClick(0)} className={`${getStatus(0)}`}>Button is {getStatus(0)}</h1>
+           <h1 onClick={this.handleClick(1)} className={`${getStatus(1)}`}>Button is {getStatus(1)}</h1>
            <Bar activeIndex={this.state.activeIndex} />
          </div>
      )
