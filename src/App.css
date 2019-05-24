@@ -233,64 +233,115 @@ footer {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
-  #gallery, #portfolio-info {
+  #gallery, #portfolio {
     display: none !important;
   }
-  #portfolio-min {
-    visibility: visible;
+  #portfolio-min, #gallery-min {
     height: 100vh;
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     background: tomato;
   }
+  #portfolio-info-min {
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .btnWrapper {
-      width: 300px;
-      height: 172px;
-      margin: 5vw!important;
+      width: 250px;
+      height: 150px;
+      margin: 5.5vw!important;
       background: indigo;
       position: relative;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
     }
     .btnWrapper:before {
       content: "";
       position: absolute;
-      top: -75px;
+      top: -62.5px;
       left: 0;
       width: 0;
       height: 0;
-      border-left: 150px solid transparent;
-      border-right: 150px solid transparent;
-      border-bottom: 75px solid indigo;
+      border-left: 125px solid transparent;
+      border-right: 125px solid transparent;
+      border-bottom: 62.5px solid indigo;
     }
     .btnWrapper:after {
       content: "";
       position: absolute;
-      bottom: -75px;
+      bottom: -62.5px;
       left: 0;
       width: 0;
       height: 0;
-      border-left: 150px solid transparent;
-      border-right: 150px solid transparent;
-      border-top: 75px solid indigo;
+      border-left: 125px solid transparent;
+      border-right: 125px solid transparent;
+      border-top: 62.5px solid indigo;
     }
-    #weddings-min {
-      /* position: relative;
-      left: 45vw;
-      top: 20vh; */
-    }
-    #portraits-min {
+#weddings-min {
 
-    }
-    #sessions-min {
+}
+#portraits-min {
 
-    }
-    #auto-min {
+}
+#sessions-min {
 
-    }
-  .img-tab {
-    flex-flow: column;
+}
+#auto-min {
+
+}
+#gallery-min {
+  /* position: relative;
+  top: -100vh;
+  left: 0vw; */
+}
+.return {
+    width: 100px;
+    height: 60px;
+    background: green;
+    position: absolute;
+    top: 5vh;
+    left: 2.5vw;
   }
+  .return:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid green;
+  }
+  .return:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid green;
+  }
+
+
+.img-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  background-size: cover;
+}
+.img {
+  flex: 0 0 auto;
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+}
+
   .gallery-link {
     align-self: center;
     position: relative;
