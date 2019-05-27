@@ -7,10 +7,15 @@ class GalleryMinified extends Component {
 
 
   render() {
-
-    const changeStatus = (idx) => this.props.activeIndex === idx ? 'reveal' : 'hide';
+    const changeStatus = (idx) => this.props.activeIdx === idx ? 'reveal' : 'hide'
+    let gallery
+    if (changeStatus === 'reveal') {
+      gallery = 'reveal'
+    } else {
+      gallery = 'hide'
+    }
     return (
-      <div id="gallery-min">
+      <div id={`gallery-min`} className={gallery}>
       <span className='return text-center'>Return</span>
         <div className={`img-scroll wedding-gallery ${changeStatus(0)}`}>
           <li className="img set1"></li>

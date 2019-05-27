@@ -7,14 +7,13 @@ class PortfolioMinified extends Component {
   constructor() {
     super()
     this.state = {
-      activeIndex: -1
+      activeIdx: -1
     };
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(index) {
-    // return () => this.setState({ activeIndex: index });
-    return () => console.log({ activeIndex: index });
+  handleClick(idx) {
+    return () => this.setState({ activeIdx: idx });
   }
 
   render() {
@@ -34,7 +33,7 @@ class PortfolioMinified extends Component {
             <h2 className='tab-title text-center'>Auto</h2>
           </div>
         </div>
-        <GalleryMinified activeIndex={this.state.activeIndex} />
+        <GalleryMinified activeIdx={this.state.activeIdx} />
       </section>
     )
   }

@@ -8,6 +8,12 @@ class Gallery extends Component {
 
   render() {
     const content = (index) => this.props.activeIdx === index ? 'reveal' : 'hide';
+    // let bobYourUncle
+    // if (content === 'reveal') {
+    //   bobYourUncle = 'THUNDERCATS GOOO!!!!!';
+    // } else {
+    //   bobYourUncle = 'NOPE'
+    // }
     return (
       <div id="gallery" className="col-md-7">
         <div className={`img-scroll wedding-gallery ${content(0)}`}>

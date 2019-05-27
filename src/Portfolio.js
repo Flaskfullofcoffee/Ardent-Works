@@ -11,7 +11,7 @@ class Portfolio extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick(idx, e) {
+  handleClick(idx) {
     return () => this.setState({ activeIdx: idx });
   }
 

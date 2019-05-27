@@ -3,7 +3,9 @@ import Navigation from './navigation.js';
 import Hero from './hero.js';
 import Intro from './intro.js';
 import Portfolio from './portfolio.js';
+import Gallery from './gallery.js';
 import PortfolioMinified from './portfolioMinified.js'
+import GalleryMinified from './galleryMinified.js';
 import Pricing from './pricing.js';
 import Contact from './contact.js';
 import Foo from './foo.js'
