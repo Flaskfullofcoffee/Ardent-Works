@@ -52,8 +52,8 @@ li {
 }
 .message {
   position: relative;
-  top: 15vh;
-  left: 30vw;
+  top: -12vh;
+  left: 52vw;
 }
 .message h2 {
   font-family: 'Satisfy', cursive;
@@ -70,10 +70,10 @@ li {
 }
 .ribbon {
   position: relative;
-  width: 30vw;
-  height: 12vh;
-  top: 40vh;
-  right: 1vw;
+  width: 0vw;
+  height: 10vh;
+  top: -32vh;
+  left: 52vw;
 }
 .ribbon h3 {
   padding-top: 1.25vh !important;
@@ -129,7 +129,10 @@ li {
 
 @media (max-width: 768px) {
   .banner {
-    background-position: 50%;
+    background-position: 60%;
+  }
+  .brand {
+    top: 2vh;
   }
   .brand h1 {
     font-size: 3rem;
@@ -138,8 +141,8 @@ li {
     font-size: 2rem;
   }
   .message {
-    top: 10vh;
-    left: 10vw;
+    top: -24vh;
+    left: 28vw;
   }
   .message h2, .message h3 {
     font-size: 2.5rem;
@@ -148,9 +151,10 @@ li {
     font-size: 1.5rem;
   }
   .ribbon {
-    top: -20vh;
-    left: 45vw;
-    width: 42%;
+    top: -38vh;
+left: 38vw;
+height: 12vh;
+max-width: 58%;
   }
   .ribbon h3 {
     font-size: 1.5rem;
@@ -164,7 +168,7 @@ li {
 
 @media (max-width: 575.98px) {
   .banner {
-    background-position: 60%;
+    background-position: 65%;
   }
   .brand {
     top: 2.5vh;
@@ -176,8 +180,8 @@ li {
     font-size: 2rem;
   }
   .message {
-    top: 18vh;
-    left: -5vw;
+    top: 2vh;
+    left: 32vw;
   }
   .message h2, .message h3 {
     font-size: 2rem;
@@ -187,8 +191,8 @@ li {
   }
   .ribbon {
     top: -52vh;
-    left: 35.5vw;
-    width: 55%;
+    left: 32vw;
+    width: 62%;
   }
   .ribbon h3 {
     font-size: 1.5rem;
