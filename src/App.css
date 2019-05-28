@@ -1,3 +1,7 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Righteous|Satisfy|Unica+One|Yellowtail&display=swap');
+
 
 /* Global styles */
 
@@ -22,6 +26,181 @@ li {
 #portfolio { background: tomato; }
 #pricing { background: indigo; }
 #contact { background: tomato; }
+
+/* Under Construction Styles */
+
+.banner {
+  height: 100vh;
+  background-image: url('./images/constructionImg.jpg');
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
+}
+.brand {
+  position: relative;
+  top: 7.5vh;
+  left: 2.5vw;
+  font-family: 'Yellowtail', cursive;
+}
+.brand h1 {
+  font-size: 3vw;
+}
+.brand p {
+  position: relative;
+  left: 10vw;
+  font-size: 2.5vw;
+}
+.message {
+  position: relative;
+  top: 15vh;
+  left: 30vw;
+}
+.message h2 {
+  font-family: 'Satisfy', cursive;
+  font-size: 4vw;
+}
+.message h3 {
+  font-family: 'Righteous', cursive;
+  font-size: 3.5vw;
+  word-spacing: 1.5px;
+}
+.message p {
+  font-family: 'Unica One', cursive;
+  font-size: 1.75vw;
+}
+.ribbon {
+  position: relative;
+  width: 30vw;
+  height: 12vh;
+  top: 40vh;
+  right: 1vw;
+}
+.ribbon h3 {
+  padding-top: 1.25vh !important;
+}
+.ribbon {
+  background: #4b9ae5;
+  display: inline-block;
+  color: #f4f4f4;
+  padding: 0.5em 0.7em;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  position: relative;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotate(-15deg) skew(-15deg, 10deg);
+          transform: rotate(-15deg) skew(-15deg, 10deg);
+}
+.ribbon:before, .ribbon:after {
+  content: "";
+  width: 0;
+  height: 2em;
+  display: block;
+  background: #4993da;
+  position: absolute;
+  border-style: solid;
+  border-width: 0.5em;
+  z-index: -1;
+  -webkit-transform: translateZ(-1em);
+          transform: translateZ(-1em);
+}
+.ribbon:before {
+  left: -0.5em;
+  top: 0.5em;
+  border-color: #358de2 #1d74c7 #358de2 #358de2;
+}
+.ribbon:after {
+  right: -0.5em;
+  top: -0.5em;
+  border-color: #358de2 #358de2 #358de2 #1d74c7;
+}
+
+.contactMe {
+  position: relative;
+  top: 0vh;
+  right: -1vw;
+  color: #4b9ae5;
+  font-family: 'Unica One', cursive;
+  font-size: 3vw;
+}
+
+
+@media (max-width: 768px) {
+  .banner {
+    background-position: 50%;
+  }
+  .brand h1 {
+    font-size: 3rem;
+  }
+  .brand p {
+    font-size: 2rem;
+  }
+  .message {
+    top: 10vh;
+    left: 10vw;
+  }
+  .message h2, .message h3 {
+    font-size: 2.5rem;
+  }
+  .message p {
+    font-size: 1.5rem;
+  }
+  .ribbon {
+    top: -20vh;
+    left: 45vw;
+    width: 42%;
+  }
+  .ribbon h3 {
+    font-size: 1.5rem;
+  }
+  .contactMe {
+    top: 0vh;
+    left: 2vw;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .banner {
+    background-position: 60%;
+  }
+  .brand {
+    top: 2.5vh;
+  }
+  .brand h1 {
+    font-size: 3rem;
+  }
+  .brand p {
+    font-size: 2rem;
+  }
+  .message {
+    top: 18vh;
+    left: -5vw;
+  }
+  .message h2, .message h3 {
+    font-size: 2rem;
+  }
+  .message p {
+    font-size: 1.5rem;
+  }
+  .ribbon {
+    top: -52vh;
+    left: 35.5vw;
+    width: 55%;
+  }
+  .ribbon h3 {
+    font-size: 1.5rem;
+  }
+  .contactMe {
+    top: 0vh;
+    left: 2vw;
+    font-size: 2rem;
+  }
+}
+
+/* End of Construction Styles */
 
 .foobar {
   font-size: 5vw;
